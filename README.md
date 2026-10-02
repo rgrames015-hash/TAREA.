@@ -1,43 +1,42 @@
-# SCRUM + Kanban + Inteligencia Artificial
+# 🎵 Music Wave
 
-## Descripción
+Music Wave es un proyecto web de música creado con HTML, CSS y
+JavaScript.
 
-Este proyecto muestra cómo se pueden utilizar SCRUM, Kanban e
-Inteligencia Artificial dentro de un proyecto tecnológico.
+## Funciones
 
-## SCRUM
+- Inicio
+- Explorar canciones
+- Buscador de canciones
+- Filtro por géneros
+- Biblioteca
+- Canciones favoritas
+- Reproductor de música
+- Botones anterior, reproducir/pausar y siguiente
+- Control de volumen
+- Acceso a YouTube Music
 
-SCRUM es una metodología ágil que permite organizar el trabajo
-de un equipo.
+## Géneros
 
-### Roles
+El proyecto incluye ejemplos de:
 
-- Product Owner
-- Scrum Master
-- Development Team
+- Pop
+- Rock
+- Bachata
+- Reggaetón
 
-## Kanban
+## Tecnologías utilizadas
 
-Kanban permite organizar visualmente las tareas de un proyecto.
-
-### Columnas
-
-- Por hacer
-- En proceso
-- En revisión
-- Terminado
-
-## Inteligencia Artificial
-
-La Inteligencia Artificial puede ayudar a los equipos a automatizar
-tareas, analizar información, generar ideas y apoyar la programación.
-
-## Tecnologías
-
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-## Proyecto
+## Archivos
 
-Proyecto escolar sobre SCRUM, Kanban e Inteligencia Artificial.
+```text
+Music-Wave/
+│
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
