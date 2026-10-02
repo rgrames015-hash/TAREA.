@@ -3,73 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCRUM, Kanban e IA</title>
+    <title>Music Wave</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>SCRUM + KANBAN + IA</h1>
-        <p>Herramientas para organizar y mejorar proyectos</p>
+    <header class="header">
+        <div class="logo">🎵 Music Wave</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#explora">Explora</a>
+            <a href="#biblioteca">Biblioteca</a>
+        </nav>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Buscar canciones..."
+            onkeyup="buscarCancion()"
+        >
     </header>
 
     <main>
 
-        <section class="scrum">
-            <h2>SCRUM</h2>
+        <section id="inicio" class="hero">
+            <div>
+                <h1>Tu música,<br><span>tu mundo.</span></h1>
+                <p>
+                    Descubre canciones, artistas y géneros
+                    que te acompañen en cada momento.
+                </p>
 
-            <div class="roles">
-                <div class="card">
-                    <h3>Product Owner</h3>
-                    <p>Define las prioridades y las necesidades del proyecto.</p>
-                </div>
+                <button onclick="mostrarCanciones()">
+                    Explorar música
+                </button>
+            </div>
 
-                <div class="card">
-                    <h3>Scrum Master</h3>
-                    <p>Ayuda al equipo a organizarse y seguir la metodología Scrum.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Development Team</h3>
-                    <p>Se encarga de desarrollar y entregar el producto.</p>
-                </div>
+            <div class="hero-icon">
+                🎧
             </div>
         </section>
 
-        <section class="kanban">
-            <h2>Tablero Kanban</h2>
 
-            <div class="tablero">
+        <section id="explora">
+            <h2>Explora música</h2>
 
-                <div class="columna">
-                    <h3>Por hacer</h3>
-                    <div class="tarea">Investigar SCRUM</div>
-                    <div class="tarea">Investigar Kanban</div>
+            <div class="generos">
+                <button onclick="filtrarGenero('Todos')">Todos</button>
+                <button onclick="filtrarGenero('Pop')">Pop</button>
+                <button onclick="filtrarGenero('Rock')">Rock</button>
+                <button onclick="filtrarGenero('Bachata')">Bachata</button>
+                <button onclick="filtrarGenero('Reggaeton')">Reggaetón</button>
+            </div>
+
+            <div id="listaCanciones" class="canciones">
+
+                <div class="cancion" data-genero="Pop">
+                    <div class="portada">🎤</div>
+                    <div>
+                        <h3>Pop Dreams</h3>
+                        <p>Music Wave • Pop</p>
+                    </div>
+                    <button onclick="reproducir('Pop Dreams')">▶</button>
                 </div>
 
-                <div class="columna">
-                    <h3>En proceso</h3>
-                    <div class="tarea">Crear la página</div>
+                <div class="cancion" data-genero="Rock">
+                    <div class="portada">🎸</div>
+                    <div>
+                        <h3>Rock Night</h3>
+                        <p>Music Wave • Rock</p>
+                    </div>
+                    <button onclick="reproducir('Rock Night')">▶</button>
                 </div>
 
-                <div class="columna">
-                    <h3>En revisión</h3>
-                    <div class="tarea">Revisar el proyecto</div>
+                <div class="cancion" data-genero="Bachata">
+                    <div class="portada">💃</div>
+                    <div>
+                        <h3>Bachata Love</h3>
+                        <p>Music Wave • Bachata</p>
+                    </div>
+                    <button onclick="reproducir('Bachata Love')">▶</button>
                 </div>
 
-                <div class="columna">
-                    <h3>Terminado</h3>
-                    <div class="tarea">Planificación</div>
+                <div class="cancion" data-genero="Reggaeton">
+                    <div class="portada">🔥</div>
+                    <div>
+                        <h3>Summer Beat</h3>
+                        <p>Music Wave • Reggaetón</p>
+                    </div>
+                    <button onclick="reproducir('Summer Beat')">▶</button>
                 </div>
 
             </div>
         </section>
 
-        <section class="inteligencia">
-            <h2>Impacto de la Inteligencia Artificial</h2>
 
-            <p>
-                La Inteligencia Artificial puede ayudar en los proyectos
-                tecnológicos automatizando tareas, generando ideas,
-                analizando información y
+        <section id="biblioteca">
+            <h2>📚 Mi biblioteca</h2>
+
+            <div class="biblioteca-box">
