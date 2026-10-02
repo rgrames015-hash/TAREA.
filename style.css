@@ -4,134 +4,251 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #222;
-}
-
-header {
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    background: #0f172a;
     color: white;
-    text-align: center;
-    padding: 35px 20px;
+    padding-bottom: 100px;
 }
 
-header h1 {
-    margin-bottom: 10px;
+.header {
+    background: #111827;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+#buscador {
+    margin-left: auto;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
 }
 
 main {
     width: 90%;
     max-width: 1100px;
-    margin: 30px auto;
+    margin: auto;
 }
 
-section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #2563eb;
-    margin-bottom: 25px;
-}
-
-.roles {
+.hero {
+    min-height: 430px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 0;
 }
 
-.card {
-    background: #eef2ff;
-    width: 30%;
-    min-width: 220px;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
+.hero h1 {
+    font-size: 55px;
 }
 
-.card h3 {
-    color: #4f46e5;
-    margin-bottom: 10px;
+.hero h1 span {
+    color: #a78bfa;
 }
 
-.tablero {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-}
-
-.columna {
-    background: #e2e8f0;
-    padding: 15px;
-    border-radius: 10px;
-    min-width: 220px;
-    flex: 1;
-}
-
-.columna h3 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.tarea {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.inteligencia {
-    text-align: center;
-}
-
-.inteligencia p {
+.hero p {
+    margin: 20px 0;
+    max-width: 500px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+.hero-icon {
+    font-size: 180px;
 }
 
 button {
-    background: #2563eb;
+    background: #7c3aed;
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 11px 18px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
-    background: #1d4ed8;
+    background: #9333ea;
 }
 
-#resultado {
-    color: #7c3aed;
-    font-weight: bold;
-    margin-top: 20px;
+section {
+    margin: 60px 0;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+.generos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.canciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.cancion {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cancion .portada {
+    width: 65px;
+    height: 65px;
+    background: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.cancion div:nth-child(2) {
+    flex: 1;
+}
+
+.cancion p {
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.biblioteca-box,
+.youtube {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.biblioteca-box p,
+.youtube p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+#favorito {
+    margin-top: 15px;
+    color: #a78bfa;
+}
+
+.reproductor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111827;
+    border-top: 1px solid #334155;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+.info-reproductor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-portada {
+    background: #7c3aed;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-reproductor p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.controles {
+    display: flex;
+    gap: 10px;
+}
+
+.volumen {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 footer {
-    background: #1e293b;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    color: #94a3b8;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
-    .card {
-        width: 100%;
+    .header {
+        flex-wrap: wrap;
     }
 
-    .tablero {
+    #buscador {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero {
+        text-align: center;
         flex-direction: column;
     }
 
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-icon {
+        font-size: 100px;
+    }
+
+    .canciones {
+        grid-template-columns: 1fr;
+    }
+
+    .reproductor {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
