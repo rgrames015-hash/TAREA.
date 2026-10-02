@@ -1,21 +1,84 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi proyecto</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<div class="app">
+  <aside class="sidebar">
+    <h2 class="logo">♫ MusicWave</h2>
+    <nav>
+      <a href="#inicio">⌂ Inicio</a>
+      <a href="#explorar">⌕ Explorar</a>
+      <a href="#biblioteca">▤ Biblioteca</a>
+    </nav>
+    <div class="side-bottom">
+      <p>Tu música favorita, en un solo lugar.</p>
+    </div>
+  </aside>
 
-<body>
+  <main>
+    <header>
+      <div class="top">
+        <button class="menu">☰</button>
+        <div class="search">
+          <span>⌕</span>
+          <input id="search" placeholder="¿Qué quieres escuchar?">
+        </div>
+        <button class="profile">A</button>
+      </div>
+    </header>
 
-    <h1>Mi proyecto en GitHub</h1>
+    <section id="inicio" class="hero">
+      <div>
+        <p class="eyebrow">MUSICWAVE PREMIUM DESIGN</p>
+        <h1>La música<br>no tiene límites.</h1>
+        <p>Descubre nuevos sonidos y escucha lo que te gusta.</p>
+        <button onclick="showAll()">Explorar música</button>
+      </div>
+      <div class="hero-art">♫</div>
+    </section>
 
-    <p>Esta es mi primera página web creada con HTML.</p>
+    <section id="explorar">
+      <h2>Explorar géneros</h2>
+      <div id="genres" class="genres"></div>
+    </section>
 
-    <button onclick="saludar()">Haz clic aquí</button>
+    <section id="biblioteca">
+      <div class="section-heading">
+        <h2 id="listTitle">Música para ti</h2>
+        <span id="resultCount"></span>
+      </div>
+      <div id="musicGrid" class="music-grid"></div>
+    </section>
 
-    <script src="js/script.js"></script>
+    <section class="youtube-section">
+      <h2>Escucha en YouTube</h2>
+      <p>Busca canciones, artistas o álbumes en YouTube.</p>
+      <button id="youtubeSearch">Buscar en YouTube Music ↗</button>
+    </section>
+  </main>
 
-</body>
-</html>
+  <footer class="player">
+    <div class="now">
+      <img id="playingCover"
+        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100"
+        alt="Portada">
+      <div>
+        <strong id="playingTitle">MusicWave</strong>
+        <p id="playingArtist">Elige una canción</p>
+      </div>
+    </div>
+    <div class="player-controls">
+      <div class="buttons">
+        <button id="previous">⏮</button>
+        <button id="play">▶</button>
+        <button id="next">⏭</button>
+      </div>
+      <div class="progress">
+        <span id="time">0:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0">
+        <span id="total">0:00</span>
+      </div>
+    </div>
+    <div class="player-volume">
+      🔊 <input id="volume" type="range" min="0" max="1"
+        step="0.01" value="0.7">
+    </div>
+  </footer>
+  <audio id="audio"></audio>
+</div>
