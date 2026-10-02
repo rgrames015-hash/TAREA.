@@ -2,16 +2,15 @@
 
 ## Descripción
 
-Este proyecto presenta de manera interactiva los conceptos de SCRUM,
-Kanban y el impacto de la Inteligencia Artificial en los proyectos
-tecnológicos.
+Este proyecto muestra cómo se pueden utilizar SCRUM, Kanban e
+Inteligencia Artificial dentro de un proyecto tecnológico.
 
 ## SCRUM
 
-SCRUM es una metodología ágil utilizada para organizar y desarrollar
-proyectos.
+SCRUM es una metodología ágil que permite organizar el trabajo
+de un equipo.
 
-### Roles principales
+### Roles
 
 - Product Owner
 - Scrum Master
@@ -19,27 +18,26 @@ proyectos.
 
 ## Kanban
 
-Kanban permite visualizar las tareas de un proyecto mediante un tablero.
+Kanban permite organizar visualmente las tareas de un proyecto.
 
-Las columnas utilizadas en este proyecto son:
+### Columnas
 
-- Por Hacer
-- En Proceso
-- En Revisión
+- Por hacer
+- En proceso
+- En revisión
 - Terminado
 
 ## Inteligencia Artificial
 
-La Inteligencia Artificial puede ayudar a los equipos tecnológicos
-automatizando tareas, analizando información, generando ideas y
-apoyando la programación.
+La Inteligencia Artificial puede ayudar a los equipos a automatizar
+tareas, analizar información, generar ideas y apoyar la programación.
 
-## Tecnologías utilizadas
+## Tecnologías
 
 - HTML
 - CSS
 - JavaScript
 
-## Autores
+## Proyecto
 
 Proyecto escolar sobre SCRUM, Kanban e Inteligencia Artificial.
