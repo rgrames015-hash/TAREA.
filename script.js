@@ -1,8 +1,8 @@
-function mostrarMensaje() {
+function mostrarImpacto() {
 
-    const mensaje = document.getElementById("mensaje");
+    const resultado = document.getElementById("resultado");
 
-    mensaje.textContent =
-        "La IA puede ayudar a automatizar tareas, analizar información, generar ideas y apoyar al equipo de desarrollo.";
+    resultado.textContent =
+        "La IA puede automatizar tareas, analizar información, generar ideas y ayudar al equipo durante el desarrollo de un proyecto.";
 
 }
